@@ -10,10 +10,33 @@ Estamos desarrollando una web app diseñada para las estudiantes de Laboratoria.
 
 
 ### Introducción 
-(Pendiente, investigación)
+
+#### Importancia de la gestión saludable de la finanzas
+
+La cultura financiera son las habilidades, conocimientos y prácticas que se poseen y la educación financiera es un proceso de asimilación de información y herramientas que permiten a las personas tomar decisiones en su vida cotidiana. (Gómez, 2014).
+Son las habilidades, conocimientos y prácticas que llevamos día a día para lograr una correcta administración de lo que ganamos y gastamos, así como un adecuado manejo de los productos financieros para tener una mejor calidad de vida. (Sánchez, 2014).
+
+Es una realidad que en nuestro país, en general, no contamos con educación ni cultura financieras. Tendemos a borrar el futuro y movernos por las necesidades, emergencias y satisfacciones a corto plazo.
+
+Sin embargo, en algún momento de nuestras vidas necesitamos construir una independencia financiera sostenible y ahí comenzamos a sentir el peso de nuestras carencias en este ámbito.
+
+En este momento se hace indispensable asumir responsablemente la gestión de nuestras finanzas personales. Una gestión saludable de las mismas se basa en construir buenos hábitos y ser constantes. Suena fácil, pero ¿por qué nos cuesta tanto? 
+
+Una planeación financiera es trazar una ruta, reconocer en dónde estamos hoy y hacia dónde y cómo queremos llegar. Es un proceso en el que reconocemos nuestra situación financiera actual, definimos nuestras metas y objetivos, priorizamos los recursos con los que contamos (porque son escasos y finitos) y desarrollamos una estrategia que nos lleve a las metas y objetivos propuestos.
+
+Para trazar este camino se requiere un proceso de autoconocimiento. Reconocer ciertos patrones de conducta en nosotras mismas para entender qué podemos hacer para llevar nuestro plan a cabo. Debemos ser pacientes y saber que los cambios requieren mucha disciplina de nuestra parte y que no se verán de un día para otro. Debemos mantener claro y enfocado qué es lo más importante para nosotras, ya que esto nos permite priorizar y ésta es la clave para un buen manejo de nuestros recursos.
+
+A veces, los pretextos para no asumir responsablemente la gestión de nuestras finanzas es el tener bajos o nulos ingresos. Nada más lejanos a la realidad, ya que mientras más escaso sea el dinero que tenemos y ganamos, más importante será priorizar, cuidarlo y manejarlo bien.
+
+¿Por dónde empezar? Es esencial realizar un presupuesto: un registro de nuestros ingresos y gastos. Esto nos ayudará a mantener el equilibrio de nuestras finanzas y evita que caer en círculos vicioso de vivir al día o endeudamiento.
+
+De acuerdo con un estudio sobre la cultura financiera de los jóvenes en México, sólo el 22% de este sector poblacional lleva un registro de su presupuesto.
+
+Cualquier persona puede ahorrar, aún teniendo un bajo presupuesto, ya sea por tener bajos ingresos o estar viviendo de una reserva de ahorros. La clave para hacerlo es registrar y administrar los gastos, destinar un monto definido para ahorro dentro de nuestro presupuesto y dentro del ahorro, definir categorías, por ejemplo, ahorro para tener un fondo de emergencias, ahorro para una meta concreta a corto plazo y ahorro para metas a futuro.
+
+Para crecer financieramente, nuestros ahorros se pueden incrementar en la medida en que reducimos nuestros gastos (como consecuencia de la planeación) y/o en la medida en que se incrementen nuestros ingresos.
 
 ***
-
 
 ### Nuestras usuarias
 
@@ -92,26 +115,36 @@ Así que nos dedicamos a crear una primer impresión de nuestro arquetipo de usu
 
 ***
 
-### Nuestra propuesta: [Nombre de nuestra app]
+### Nuestra propuesta: Labo Wallet
 
-Nuestra propuesta es: "Nombre".  
+Identificamos que la mayoría de nosotras estamos viviendo de nuestros ahorros. *Labo Wallet* es una herramienta que nos ayudará a optimizar los recursos que tenemos disponibles para los próximos meses,
+ para poder terminar el *bootcamp* sin preocupaciones y sin llegar a crisis financieras.  
+*Labo Wallet* nos permite hacer un registro de estos recursos disponibles y de nuestros gastos.  
+Tomando consciencia de ellos, se abre la posibilidad de ahorrar para poder sobrellevar estos meses de manera tranquila, contar con una reserva para atender gastos imprevistos e ir gestando una cultura de ahorro y planificación financiera para cuando comencemos a percibir ingresos.
 
-Identificamos que la mayoría de nosotras estamos viviendo de nuestros ahorros. Esta web app nos ayuda a gestionar nuestros gastos para poder optimizar el presupuesto limitado que tenemos durante el *bootcamp*.  
-Al administrar nuestros gastos se abre la posibilidad de ahorrar para poder terminar el *bootcamp* sin preocupaciones y sin llegar a crisis financieras, considerando incluso algunos meses más sin ingresos, durante el periodo de contratación.
-Así mismo, queremos mantener una reserva para sentirnos seguras en caso de que surjan gastos imprevistos.
+#### Historias de usuarix
 
-Para lograrlo, esta app:
+Para lograrlo, esta app nos permite:
 
-- Permite crear un perfil de usuaria y almacenar mi información.
-- Permite registrar presupuestos y ahorros disponibles.
-- Permite registrar ingresos.
-- Permite registrar gastos identificados por rubros.
-- Permite actualizar mi perfil con los movimientos que realizo mes por mes.
-- Permite recibir alertas sobre tu dinero disponible.
-- Permite crear y actualizar presupuestos.
-  
+- Como estudiante de Laboratoria quiero realizar un presupuesto de los próximos meses para poder sobrellevar los gastos que realizaré durante el *bootcamp* y el periodo de contratación.
+- Como usuaria quiero ingresar a la web app *Labo Wallet* de manera sencilla.
+- Como usuaria quiero crear un perfil personal.
+    - Como usuaria quiero editar mi perfil personal para definir mi presupuesto general, mensual y semanal.
+- Como usuaria ya registrada, quiero iniciar sesión y visualizar la información registrada previamente.
+- Como usuaria quiero visualizar mi presupuesto general, semanal y/o mensual.
+- Como usuaria quiero registrar mis gastos e identificarlos por categorías.
+- Como usuaria quiero que mi presupuesto se actualice al registrar mis gastos.
+- Como usuaria quiero registrar mis ingresos y que se actualice mi presupuesto general.
+- Como usuaria quiero visualizar la data sobre los movimientos (gastos e ingresos) que realizo mes por mes para actualizar mi perfil financiero.
+- Como usuaria quiero recibir notificaciones:
 
-[Prototipo de baja fidelidad]  
+    - Si estoy alcanzando el límite de mi presupuesto.
+    - Si me pasé del presupuesto.
+
+
+#### Prototipos
 
 [Prototipo de alta fidelidad]
+
+
 
