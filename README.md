@@ -144,7 +144,7 @@ Para lograrlo, esta app nos permite:
 
 #### Prototipos
 
-[Prototipo de alta fidelidad]
+https://www.figma.com/file/AV1oIzSA48a5gshtUZrIyZ/Fintech?node-id=0%3A1
 
 
 
