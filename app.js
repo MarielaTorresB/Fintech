@@ -1,3 +1,11 @@
+const buttonSavings = document.getElementById("button-calculate-savings");
+const buttonSaveBudget = document.getElementById("button-save-budget");
+const buttonRegister = document.getElementById("save-register");
+const buttonMyAccount = document.getElementById("button-create-account");//NUEVO BOTÓN DECLARADO PARA GUARDAR DATA CON LOCALSTORAGE
+const buttonClearBudget = document.getElementById("button-clear-budget");//NUEVO BOTÓN DECLARADO PARA LIMPIAR INPUTS DE PRESUPUESTO
+const buttonHome = document.getElementById("button-home-MyAccount");//NUEVO BOTÓN
+const buttonEditAccount = document.getElementById("button-edit-account");//NUEVO BOTÓN
+
 //Genera proyección de presupuestos y ahorros
 //Función para ingresos
 const myBudgets = () => {
@@ -10,33 +18,23 @@ const myBudgets = () => {
 const buttonBudget = document.getElementById("button-calculate-budget");
 buttonBudget.addEventListener("click", myBudgets);
 
-//Función ahorros
+/*Función ahorros - SE REPITE
 const mySavings = () => {
     let dailySaving = document.getElementById("daily-saving").value;
     let months = document.getElementById("months").value;
     document.getElementById("to-save").value = dailySaving*30*months;
-}
-const buttonSavings = document.getElementById("button-calculate-savings");
-buttonSavings.addEventListener("click", mySavings);
-
-//
-const buttonSaveBudget = document.getElementById("button-save-budget");
-const buttonRegister = document.getElementById("save-register");
-const buttonMyAccount = document.getElementById("button-create-account");//NUEVO BOTÓN DECLARADO PARA GUARDAR DATA CON LOCALSTORAGE
-const buttonClearBudget = document.getElementById("button-clear-budget");//NUEVO BOTÓN DECLARADO PARA LIMPIAR INPUTS DE PRESUPUESTO
-const buttonHome = document.getElementById("button-home-MyAccount");//NUEVO BOTÓN
-const buttonEditAccount = document.getElementById("button-edit-account");//NUEVO BOTÓN
+}*/
 ​
 //Captura, imprime, almacena y limpia nombre
 const greeting = () => {
     //Captura datos de input 
     let name = document.getElementById("user-name").value;
     //Imprime datos de input
+
     document.getElementById("greeting").innerHTML = "Hola, " + name;
     //Almacena datos en localStorage
     localStorage.setItem("Name", name);
 }
-​
 const profileName = () => {
     let name = localStorage.getItem("Name");
     document.getElementById("greeting").innerHTML = "Hola, " + name;
@@ -74,7 +72,7 @@ const mySavings = () => {
     localStorage.setItem("Future saving", futureSavings);
 }
 ​
-//Obtiene e imprime presupuestos
+//Obtiene e imprime presupuestos y ahorros
 const printBudget = () => {
     let savings = localStorage.getItem("Savings");
     document.getElementById("savings-display").innerHTML = "$"+savings+".00";
@@ -127,7 +125,7 @@ const clearHome = () => {
     document.getElementById("dailySaving-display").innerHTML = "";
 }
 ​
-​
+​buttonSavings.addEventListener("click", mySavings);
 buttonRegister.addEventListener("click", greeting);//imprime nombre de usuaria en pantalla principal
 buttonRegister.addEventListener("click",profileName);//imprime nombre de usuaria después de refrescar página y en modal de presupuesto
 buttonRegister.addEventListener("click", clearBudget);//limpia modales de registro y presupuesto en caso de nuevo registro

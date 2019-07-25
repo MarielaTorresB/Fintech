@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <!--Meta-tag-->
@@ -17,7 +17,25 @@
             <img src="img/coins.svg" class="coins">
         </figure> 
         <h1>Labo-wallet</h1>
-         
+    <!--Desktop-->
+    <div id="info-square">
+            <div>
+                   <h1>¡Comienza a ahorrar con Labo-wallet!</h1>
+               </div>
+               <div>
+                   <p>¡Obtén presupuestos personalizados!</p>
+               </div>
+           </div>
+       <!--Mobile-->
+                     <div id="mobile-info">
+                         <div>
+                           <h1>Comienza a ahorrar con Labo-wallet</h1>
+                           <div>
+                           <p>Mantén tus metas de ahorro</p>
+                       </div>
+               </div>
+       </div>
+   
     <!---Mobile-->
             <ul class="menu">
                 <li>
@@ -118,17 +136,7 @@
         </div>
         </div>
         <!---Modal soporte y ayuda-->
-<div class="modal fade" id="exampleModalHelp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Labo Wallet</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h4 class="modal-header-1">Soporte y ayuda</h4>
+        <h4 class="modal-header-1">Soporte y ayuda</h4>
               <p> Si tienes algún problema con la aplicación puedes contactarte con nosotros enviando un correo a supportlabowallet@gmail.com </p>
             </div>
             <div class="modal-footer">
@@ -137,30 +145,104 @@
           </div>
         </div>
     </div>
-    <div class="info">
-        <!--Desktop-->
-     <div id="info-square">
-         <div>
-                <h1>¡Comienza a ahorrar con Labo-wallet!</h1>
+    <div class="modal fade" id="exampleModalHelp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Labo Wallet</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div>
-                <p>¡Obtén presupuestos personalizados!</p>
             </div>
         </div>
-    <!--Mobile-->
-                  <div id="mobile-info">
-                      <div>
-                        <h1>Comienza a ahorrar con Labo-wallet</h1>
-                        <div>
-                        <p>Mantén tus metas de ahorro</p>
+    </div>
+    <!--Modal perfil financiero-->
+            <div class="modal-body">
+                <h4>Perfil financiero de <div id="name-profile"></div></h4> <!--OJO NUEVO: CREA DIV PARA RECUPERAR DATA CON LOCAL STORAGE-->
+                <h5>Mis ahorros*</h5>
+              <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" id="savings" class="form-control" aria-label="Amount (to the nearest dollar)" required>
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+                <h6>¿Para cuánto tiempo?*</h6>
+                <input type="number" id="months" placeholder="Número de meses" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary" id="button-calculate-budget">Calcular</button>
+                <br>
+                <br>
+                <h6>Presupuesto mensual</h6>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" id="monthly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                          <span class="input-group-text">.00</span>
+                        </div>
+                </div>
+                <h6>Presupuesto semanal</h6>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" id="weekly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                          <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+                <h6>Presupuesto diario</h6>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" id="daily" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+                <h6>Viendo esta proyección <br> ¿Cuánto dinero te propones ahorrar diariamente?*</h6>
+                <input type="number" id="daily-saving" placeholder="Ingresa una cantidad" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary" id="button-calculate-savings">Calcular</button>
+                <br>
+                <br>
+                <h6>Proyección de ahorro para este periodo</h6>
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" id="to-save" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                          <span class="input-group-text">.00</span>
+                        </div>
                     </div>
             </div>
-    </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="button-save-budget">Guardar cambios</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="button-clear-budget">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      
-<!--Boostrap JS-->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAccount" id="button-edit-account">
+            Editar mi cuenta
+          </button>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
+    
