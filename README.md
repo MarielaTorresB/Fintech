@@ -1,10 +1,10 @@
-## Salud Financiera Laboratoria
+## Labo Wallet
 
 [Presentación del proyecto de Laboratoria](https://github.com/Laboratoria/MEX008-hackathon-Interna-SF)
 
 ### Presentación 
 
-Estamos desarrollando una web app diseñada para las estudiantes de Laboratoria. Esta app nos ayudará a construir una cultura de la gestión de nuestras finanzas personales a lo largo del *bootcamp*.
+En este proyecto diseñamos una web app para ayudar a las estudiantes de Laboratoria  a gestionar sus finanzas personales a lo largo del *bootcamp*.
 
 ***
 
@@ -13,8 +13,9 @@ Estamos desarrollando una web app diseñada para las estudiantes de Laboratoria.
 
 #### Importancia de la gestión saludable de la finanzas
 
-La cultura financiera son las habilidades, conocimientos y prácticas que se poseen y la educación financiera es un proceso de asimilación de información y herramientas que permiten a las personas tomar decisiones en su vida cotidiana. (Gómez, 2014).
-Son las habilidades, conocimientos y prácticas que llevamos día a día para lograr una correcta administración de lo que ganamos y gastamos, así como un adecuado manejo de los productos financieros para tener una mejor calidad de vida. (Sánchez, 2014).
+>"La cultura financiera son las habilidades, conocimientos y prácticas que se poseen y la educación financiera es un proceso de asimilación de información y herramientas que permiten a las personas tomar decisiones en su vida cotidiana. (Gómez, 2014)."  
+
+>"Son las habilidades, conocimientos y prácticas que llevamos día a día para lograr una correcta administración de lo que ganamos y gastamos, así como un adecuado manejo de los productos financieros para tener una mejor calidad de vida. (Sánchez, 2014)."
 
 Es una realidad que en nuestro país, en general, no contamos con educación ni cultura financieras. Tendemos a borrar el futuro y movernos por las necesidades, emergencias y satisfacciones a corto plazo.
 
@@ -38,8 +39,9 @@ Para crecer financieramente, nuestros ahorros se pueden incrementar en la medida
 
 ***
 
-### Nuestras usuarias
+### Proceso de diseño y desarrollo
 
+### Nuestras usuarias
 
 #### ¿Por dónde empezamos?
 
@@ -144,7 +146,62 @@ Para lograrlo, esta app nos permite:
 
 #### Prototipos
 
-https://www.figma.com/file/AV1oIzSA48a5gshtUZrIyZ/Fintech?node-id=0%3A1
+##### Alta fidelidad
+Creamos un prototipo de alta fidelidad utilizando Figma:
+
+[Enlace al proyecto del prototipo](https://www.figma.com/file/AV1oIzSA48a5gshtUZrIyZ/Fintech?node-id=0%3A1)
+
+[Enlace al demo del prototipo](https://www.figma.com/proto/AV1oIzSA48a5gshtUZrIyZ/Fintech?node-id=3%3A0&scaling=scale-down)
+
+#### Maquetación y desarrollo
+
+En la creación de Labo Wallet utilizamos HTML5, CSS3, JavaScript ECMA6 y Bootstrap.
+  
+Diseñamos y maquetamos esta web app para ser responsive con enfoque *mobile first*.
+
+***
+
+### Organización del trabajo
+
+#### Pimer paso: ¡Planear!
+
+Antes que nada, realizamos nuestro tablero kanban utilizando el app Trello. Es un tablero público al cual todas las integrantes del equipo tuvimos acceso.
+
+![Tablero](img/tablero.png)
+
+[Enlace al tablero](https://trello.com/b/LEZzpuHn/salud-financiera)
+
+#### Siguiente paso: ¿Cómo nos organizamos?
+
+Esta es, de manera general, la divisón de trabajo que realizamos:
+
+Viviana  
+Participa en proceso de UX design.  
+Crea repositorio remoto en Github.  
+Elabora presentación de nuestra User persona en Canva.  
+Elabora prototipo de Figma.  
+Codea maquetación del proyecto utilizando HTML5, CSS3, Javascript y el framework Bootstrap.
+
+Mariela   
+Participa en proceso de UX design.   
+Codea maquetación del proyecto utilizando HTML5, CSS3, Javascript y el framework Bootstrap.  
+Expone reusltados de la primer entrega.
+
+Monserrat    
+Participa en proceso de UX design.  
+Codea maquetación del proyecto utilizando HTML5, CSS3, Javascript y el framework Bootstrap.  
+Expone reusltados de la primer entrega.
+  
+Marcela   
+Participa en proceso de UX design.      
+Elabora tablero en Trello.    
+Crea carpeta de archivos en Google drive.  
+Redacta README del proyecto.  
+Codea maquetación del proyecto utilizando HTML5, CSS3, Javascript y el framework Bootstrap.  
+Crea funciones en JS para DOM y capturar data.
+
+
+
 
 
 
