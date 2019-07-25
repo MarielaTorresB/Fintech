@@ -144,6 +144,9 @@ Para lograrlo, esta app nos permite:
     - Si me pasé del presupuesto.
 
 
+Presentación del proyecto en este [link](https://www.canva.com/design/DADgsoDLIdQ/QMgN_3TFW8eBIkMn2EjmhQ/edit?category=tACFasDnyEQ)
+
+
 #### Prototipos
 
 ##### Alta fidelidad
@@ -158,6 +161,35 @@ Creamos un prototipo de alta fidelidad utilizando Figma:
 En la creación de Labo Wallet utilizamos HTML5, CSS3, JavaScript ECMA6 y Bootstrap.
   
 Diseñamos y maquetamos esta web app para ser responsive con enfoque *mobile first*.
+
+#### Heurísticas de usabilidad
+
+##### Análisis de heurísticas de usabilidad
+ 
+- Visibilidad del estado del sistema: Nuestra página apps siempre mantendrá informada al usuario de cómo está manejando su dinero, y en que lo está gastando.
+
+- Relación entre el sistema y el mundo real: el sistema debería hablar el lenguaje de los usuarios mediante palabras, frases y conceptos que sean familiares al usuario, más que con términos relacionados con la apps. 
+
+- Control y libertad del usuario: El usuario tendrá la libertad de poder colocar  el monto de lo que tiene ahorrado y de los gasto que está haciendo cuenta con una sección de ayuda por si, cuenta con alguna dificultad.
+
+- Consistencia y estándares: Nuestra página será muy clara para los usuarios que comienzan a usar nuestra aplicación.
+
+- Prevención de errores: Nuesta pagina esta creada para ser  segura para el usuario ya que al momento de ingresar te pide que te login  al momento de ingresar verás tus datos guardados que solo tu puedes visualizar.
+
+- Reconocimiento antes que recuerdo: El usuario podrá ingresar solo con login al momento de que el usuario ingrese sus datos se quedarán recordados.
+
+- Flexibilidad y eficiencia de uso: Esta apps le permitirá que el usuario pueda ir teniendo un mejor manejo de su dinero ir viendo cuando le queda ahorrado y en que lo está gastando. 
+
+***
+
+### Modelo de negocios
+
+Labo-Wallet es una web app que ayuda a las estudiantes de Laboratoria a planificar sus ingresos, gastos y ahorros,creando buenos hábitos de cultura financiera.
+La web app esta diseñado pensando especialmente en las necesidades de este grupo específico que requiere de poder administrar su dinero durante el bootcamp y su proceso de colocación.
+A diferencia de las aplicaciones actualmente disponibles en el mercado, Labo-Wallet se trata de una aplicación web, por lo que a diferencia de una aplicación nativa no ocupa espacio en sus dispositivos y puede ser visualizada sin ningún problema desde sus dispositivos móviles o equipos de escritorio. Además ofrece funcionalidades que en otras aplicaciones similares se ofrecen en la versión premium. 
+Los ingresos provienen de publicidad, pero a futuro podríamos combinar la publicidad con compras integradas de forma inteligente por medio de herramientas analíticas.
+
+![Modelo de Negocios](img/modelo-negocios.png)
 
 ***
 
@@ -181,17 +213,21 @@ Crea repositorio remoto en Github.
 Elabora presentación de nuestra User persona en Canva.  
 Elabora prototipo de Figma.  
 Codea maquetación del proyecto utilizando HTML5, CSS3, Javascript y el framework Bootstrap.
+Crea funciones en JS para DOM y capturar data.
 
 Mariela   
 Participa en proceso de UX design.   
 Codea maquetación del proyecto utilizando HTML5, CSS3, Javascript y el framework Bootstrap.  
 Expone reusltados de la primer entrega.
+Redacta modelo de negocios.  
 
 Monserrat    
 Participa en proceso de UX design.  
 Codea maquetación del proyecto utilizando HTML5, CSS3, Javascript y el framework Bootstrap.  
-Expone reusltados de la primer entrega.
-  
+Expone reusltados de la primer entrega.  
+Redacta heurísticas de usabilidad.
+
+
 Marcela   
 Participa en proceso de UX design.      
 Elabora tablero en Trello.    

@@ -1,22 +1,40 @@
+const buttonSavings = document.getElementById("button-calculate-savings");
 const buttonSaveBudget = document.getElementById("button-save-budget");
 const buttonRegister = document.getElementById("save-register");
 const buttonMyAccount = document.getElementById("button-create-account");//NUEVO BOTÓN DECLARADO PARA GUARDAR DATA CON LOCALSTORAGE
 const buttonClearBudget = document.getElementById("button-clear-budget");//NUEVO BOTÓN DECLARADO PARA LIMPIAR INPUTS DE PRESUPUESTO
 const buttonHome = document.getElementById("button-home-MyAccount");//NUEVO BOTÓN
-const buttonCalculateBudget = document.getElementById("button-calculate-budget");
-const buttonCalculateSavings = document.getElementById("button-calculate-savings");
 const buttonEditAccount = document.getElementById("button-edit-account");//NUEVO BOTÓN
 
+//Genera proyección de presupuestos y ahorros
+//Función para ingresos
+const myBudgets = () => {
+    let savings1 = document.getElementById("savings").value;
+    let months = document.getElementById("months").value;
+    document.getElementById("monthly").value = savings1/months;
+    document.getElementById("weekly").value = savings1/months/4;
+    document.getElementById("daily").value = savings1/months/4/7;
+}
+const buttonBudget = document.getElementById("button-calculate-budget");
+buttonBudget.addEventListener("click", myBudgets);
+
+/*Función ahorros - SE REPITE
+const mySavings = () => {
+    let dailySaving = document.getElementById("daily-saving").value;
+    let months = document.getElementById("months").value;
+    document.getElementById("to-save").value = dailySaving*30*months;
+}*/
+​
 //Captura, imprime, almacena y limpia nombre
 const greeting = () => {
     //Captura datos de input 
     let name = document.getElementById("user-name").value;
     //Imprime datos de input
+
     document.getElementById("greeting").innerHTML = "Hola, " + name;
     //Almacena datos en localStorage
     localStorage.setItem("Name", name);
 }
-
 const profileName = () => {
     let name = localStorage.getItem("Name");
     document.getElementById("greeting").innerHTML = "Hola, " + name;
@@ -43,7 +61,7 @@ const myBudgets = () => {
     document.getElementById("daily").value = dailyBudget;    
     localStorage.setItem("Daily budget", dailyBudget);    
 }
-
+​
 //Obtiene y almacena ahorros
 const mySavings = () => {
     let dailySaving = document.getElementById("daily-saving").value;
@@ -53,8 +71,8 @@ const mySavings = () => {
     document.getElementById("to-save").value = futureSavings;
     localStorage.setItem("Future saving", futureSavings);
 }
-
-//Obtiene e imprime presupuestos
+​
+//Obtiene e imprime presupuestos y ahorros
 const printBudget = () => {
     let savings = localStorage.getItem("Savings");
     document.getElementById("savings-display").innerHTML = "$"+savings+".00";
@@ -67,7 +85,7 @@ const printBudget = () => {
     let futureSaving = localStorage.getItem("Future saving");
     document.getElementById("dailySaving-display").innerHTML = "$"+futureSaving+".00"
 }
-
+​
 //Reimprime datos en el modal de presupuesto después de refrescar página
 const reloadBudget = () => {
     let savings = localStorage.getItem("Savings");
@@ -85,7 +103,7 @@ const reloadBudget = () => {
     let futureSaving = localStorage.getItem("Future saving");
     document.getElementById("to-save").value = futureSaving;
 }
-
+​
 //Limpia inputs de modal presupuesto
 const clearBudget = () => {
     document.getElementById("user-name").value = "";
@@ -97,7 +115,7 @@ const clearBudget = () => {
     document.getElementById("daily").value = "";
     document.getElementById("to-save").value = "";
 }
-
+​
 //Limpia pantalla principal
 const clearHome = () => {
     document.getElementById("savings-display").innerHTML = "";
@@ -106,8 +124,8 @@ const clearHome = () => {
     document.getElementById("daily-display").innerHTML = "";
     document.getElementById("dailySaving-display").innerHTML = "";
 }
-
-
+​
+​buttonSavings.addEventListener("click", mySavings);
 buttonRegister.addEventListener("click", greeting);//imprime nombre de usuaria en pantalla principal
 buttonRegister.addEventListener("click",profileName);//imprime nombre de usuaria después de refrescar página y en modal de presupuesto
 buttonRegister.addEventListener("click", clearBudget);//limpia modales de registro y presupuesto en caso de nuevo registro
@@ -119,7 +137,11 @@ buttonHome.addEventListener("click", printBudget);//imprime en pantalla principa
 buttonHome.addEventListener("click", profileName);//recupera nombre para reimprimir saludo después de refrescar
 buttonSaveBudget.addEventListener("click", printBudget);//recupera presupuesto en pantalla principal después de refrescar
 buttonEditAccount.addEventListener("click", reloadBudget);//Reimprime en modal presupuesto después de refrescar
+​
 
-//Es necesario que se repitan declaraciones de botones para que se ejecuten varias funciones con el mismo botón
-//AL UNIR CÓDIGO HAY QUE VINCLUAR EL INPUT DE NOMBRE DE USUARIA DEL MODAL DE INICIAR SESIÓN PARA QUE SE IMPRIMA SU NOMBRE EN PANTALLA DE BIENVENIDA 
+
+
+
+
+
 

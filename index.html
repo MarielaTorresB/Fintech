@@ -1,90 +1,94 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+<head>
+    <!--Meta-tag-->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Labo-wallet</title>
+ <!--Hoja de estilos bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link link rel="stylesheet"  href="./style.css">
+</head>
+<body class="mainbground">
+    <header class="mainheader">
+        <nav>
+        <figure>
+            <img src="img/coins.svg" class="coins">
+        </figure> 
+        <h1>Labo-wallet</h1>
+    <!--Desktop-->
+    <div id="info-square">
+            <div>
+                   <h1>¡Comienza a ahorrar con Labo-wallet!</h1>
+               </div>
+               <div>
+                   <p>¡Obtén presupuestos personalizados!</p>
+               </div>
+           </div>
+       <!--Mobile-->
+                     <div id="mobile-info">
+                         <div>
+                           <h1>Comienza a ahorrar con Labo-wallet</h1>
+                           <div>
+                           <p>Mantén tus metas de ahorro</p>
+                       </div>
+               </div>
+       </div>
+   
+    <!---Mobile-->
+            <ul class="menu">
+                <li>
+                <figure></figure>
+                <img src="img/menu-button.svg" class="hamb-menu">
+            </figure>
+                    <ul>
+                        <li data-toggle="modal" data-target="#exampleModalSession" id="button-register"><a>Inicia sesión</a></li>
+                        <li data-toggle="modal" data-target="#exampleModalRegister" id="button-register"><a>Regístrate</a></a>
+                        <li data-toggle="modal" data-target="#exampleModalAboutUs" id="button-register"><a>Acerca de nosotros</a></li>
+                        <li data-toggle="modal" data-target="#exampleModalHelp" id="button-register"><a>Soporte y ayuda</a></li>
+                    </ul>
+                </li>
+            </ul>
+    <!---Desktop-->
+            <ul class="nomobile-menu">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalSession" id="button-register"><a>Inicia sesión</a></button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalRegister" id="button-register"><a>Regístrate</a></button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalAboutUs" id="button-register"><a>Acerca de nosotros</a></button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalHelp" id="button-register"><a>Soporte y ayuda</a></button>
+            </ul>
+        </nav>
+   </header>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <!--<div id="greeting"></div>-->
-    <h1>Labo Wallet</h1>
-    <br>
-        <!-- Button trigger modal Registro-->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="button-register">
-        Regístrate
-        </button>
-
-        <!-- Button trigger modal Mi Presupuesto-->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAccount" id="button-create-account">
-            Crear mi cuenta
-        </button>
-
-        <!--Button recupera datos de sesión después de refrescar o cerrar la página-->
-    <button type="button" class="btn btn-primary" data-target="#home-MyAccount" id="button-home-MyAccount">
-            Mi Cuenta
+   <!-- Modal Registro -->
+   <div class="modal fade" id="exampleModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Labo Wallet</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
           </button>
-          <br>
-          <br>
-    <div id="home-MyAccount">
-    <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="img/user.svg" class="card-img" alt="foto-usuarix">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title" id="greeting"></h5>
-                  <p class="card-text">Este es tu perfil</p>
-                  <p class="card-text"><small class="text-muted">Recuerda actualizar tus gastos</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-    <div class="card border-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Presupuesto global</div>
-            <div class="card-body text-secondary">
-              <h5 class="card-title" id="savings-display"></h5>
-              <p class="card-text">Este es el total de tus ahorros e ingresos registrados hasta ahora.</p>
-            </div>
-          </div>
-          <div class="card border-secondary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Presupuesto mensual</div>
-                <div class="card-body text-secondary">
-                  <h5 class="card-title" id="monthly-display"></h5>
-                  <p class="card-text">Este es tu prespuesto mensual.</p>
-                </div>
-              </div>
-              <div class="card border-secondary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Presupuesto semanal</div>
-                    <div class="card-body text-secondary">
-                      <h5 class="card-title" id="weekly-display"></h5>
-                      <p class="card-text">Este es tu presupuesto semanal.</p>
-                    </div>
-                  </div>
-                  <div class="card border-secondary mb-3" style="max-width: 18rem;">
-                        <div class="card-header">Presupuesto diario</div>
-                        <div class="card-body text-secondary">
-                          <h5 class="card-title" id="daily-display"></h5>
-                          <p class="card-text">Este es tu presupuesto diario.</p>
-                        </div>
-                      </div>
-                      <div class="card border-secondary mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Meta de ahorro para este periodo</div>
-                            <div class="card-body text-secondary">
-                              <h5 class="card-title" id="dailySaving-display"></h5>
-                              <p class="card-text">Esto puedes ahorrar si te ajustas a tu presupuesto.</p>
-                            </div>
-                          </div>
-                        </div>
-      
-      <!-- Modal Registro -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-header-1">Regístrate</h4>
+          <p>Nombre: <input type="text" id="user-name" placeholder="Ingresa tu nombre"></p>
+          <p><!--<figure><img src="img/e-mail-envelope.svg" id="email-img" alt="e-mail"></figure>E-mail: <input type="text" placeholder="Ingresa un correo electrónico"></p> -->
+          <p><!--<figure><img src="img/locked.png" id="password-img" alt="password"></figure>Contraseña: <input type="text" placeholder="Ingresa una contraseña"></p> -->
+          <p class="modal-header-1">La contraseña debe tener al menos 8 caracteres</p>
+          <p>Confirma tu contraseña:    <input type="text" placeholder="Confirma tu contraseña"></p>
+          <p> Regístrate con Facebook  <img id="facebook-button" src="img/facebook-logo-button.svg"> </p>
+          <p> Regístrate con Google  <img id="google-button" src="img/search.svg"> </p>
+        </div>
+        <div class="modal-footer" id="modal-footer"> <!--NUEVO:ATRIBUTO ID PARA AJUSTAR ESTILOS-->
+          <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+          <button type="button" class="btn btn-primary" id="save-register" data-dismiss="modal">¡Hecho!</button> <!--OJO AQUI HAY UNA MODIFICACIÓN, SE INCLUYE DATA DISMISS-->
+        </div>
+      </div>
+    </div>
+  </div>
+<!---Modal inicio sesión-->
+<div class="modal fade" id="exampleModalSession" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -94,32 +98,66 @@
               </button>
             </div>
             <div class="modal-body">
-              <h4 class="modal-header-1">Regístrate</h4>
-              <p>Nombre: <input type="text" id="user-name" placeholder="Ingresa tu nombre"></p>
-              <p><!--<figure><img src="" alt="e-mail"></figure>-->E-mail: <input type="text" placeholder="Ingresa un correo electrónico"></p>
-              <p><!--<figure><img src="" alt="password"></figure>-->Contraseña: <input type="text" placeholder="Ingresa una contraseña"></p>
-              <p class="modal-header-1">La contraseña debe tener al menos 8 caracteres</p>
-              <p>Confirma tu contraseña:    <input type="text" placeholder="Confirma tu contraseña"></p>
+              <h4 class="modal-header-1">Inicia sesión</h4>
+              <p>Email: <input type="text" id="user-name" placeholder="Ingresa tu email"></p>
+              <p>Contraseña: <input type="text" placeholder="Ingresa una contraseña"></p>
+              <p id="remember-password">¿Olvidaste tu contraseña?</p>
+              <p> Inicia sesión con Facebook  <img id="facebook-button" src="img/facebook-logo-button.svg"> </p>
+              <p> Inicia sesión con Google  <img id="google-button" src="img/search.svg"> </p>
             </div>
-            <div class="modal-footer" id="modal-footer"> <!--NUEVO:ATRIBUTO ID PARA AJUSTAR ESTILOS-->
-              <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
-              <button type="button" class="btn btn-primary" id="save-register" data-dismiss="modal">¡Hecho!</button> <!--OJO AQUI HAY UNA MODIFICACIÓN, SE INCLUYE DATA DISMISS-->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" id="save-register"><a id="session-button" href="session.html"> Inicia sesión </a></button>
             </div>
           </div>
         </div>
       </div>
-
-      
-      <!-- Modal Mi presupuesto-->
-      <div class="modal fade" id="modalAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Modal acerca de nosotros-->
+<div class="modal fade" id="exampleModalAboutUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Mi Cuenta</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Labo Wallet</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            <div class="modal-body">
+              <h4 class="modal-header-1">Acerca de nosotros</h4>
+              <p> Labo-wallet está creada para ofrecerte presupuestos personalizados y autoajustables, que ayuden a visualizar
+                  cada gasto semanal y mensual que registres. Labo-wallet proporciona estadísticas sobre la manera en la que gastas
+                  el presupuesto acordado y envía notificaciones cuando la meta de ahorro se vea afectada por sobrepasar el presupuesto
+                  fijado. Puedes añadir y recortar presupuestos a tu perfil y establecer prioridades y metas de ahorro. </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!---Modal soporte y ayuda-->
+        <h4 class="modal-header-1">Soporte y ayuda</h4>
+              <p> Si tienes algún problema con la aplicación puedes contactarte con nosotros enviando un correo a supportlabowallet@gmail.com </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalHelp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Labo Wallet</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal perfil financiero-->
             <div class="modal-body">
                 <h4>Perfil financiero de <div id="name-profile"></div></h4> <!--OJO NUEVO: CREA DIV PARA RECUPERAR DATA CON LOCAL STORAGE-->
                 <h5>Mis ahorros*</h5>
@@ -198,7 +236,6 @@
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAccount" id="button-edit-account">
             Editar mi cuenta
           </button>
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -208,3 +245,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+    
