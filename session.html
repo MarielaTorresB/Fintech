@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta-tag-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Labo-wallet</title>
+ <!--Hoja de estilos bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link link rel="stylesheet"  href="./style.css">
+</head>
+<body class="session-body">
+  <header class="mainheader">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAccount" id="button-account">
+                    Mis presupuestos
+                  </button>
+             <button type="button" class="btn btn-primary" data-target="home-MyAccount" id="button-home-MyAccount">
+  Mi Cuenta
+</button>
+    </header>
+    <section class="movements">
+<!-- Modal Mi presupuesto-->
+ <div class="modal fade" id="modalAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mi Cuenta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <h4>Perfil financiero de <div id="name-profile"></div></h4> <!--OJO NUEVO: CREA DIV PARA RECUPERAR DATA CON LOCAL STORAGE-->
+          <h5>Mis ahorros*</h5>
+        <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="number" id="savings" class="form-control" aria-label="Amount (to the nearest dollar)" required>
+              <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+              </div>
+          </div>
+          <h6>¿Para cuánto tiempo?*</h6>
+          <input type="number" id="months" placeholder="Número de meses" required>
+          <br>
+          <br>
+          <button type="button" class="btn btn-primary" id="button-calculate-budget">Calcular</button>
+          <br>
+          <br>
+          <h6>Presupuesto mensual</h6>
+          <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="number" id="monthly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                  </div>
+          </div>
+          <h6>Presupuesto semanal</h6>
+          <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="number" id="weekly" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                  </div>
+              </div>
+          <h6>Presupuesto diario</h6>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                  </div>
+                  <input type="number" id="daily" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                  </div>
+              </div>
+          <h6>Viendo esta proyección <br> ¿Cuánto dinero te propones ahorrar diariamente?*</h6>
+          <input type="number" id="daily-saving" placeholder="Ingresa una cantidad" required>
+          <br>
+          <br>
+          <button type="button" class="btn btn-primary" id="button-calculate-savings">Calcular</button>
+          <br>
+          <br>
+          <h6>Proyección de ahorro para este periodo</h6>
+          <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="number" id="to-save" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                  </div>
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="button-save-budget">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="button-clear-budget">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+​
+ <!--Button recupera datos de sesión después de refrescar o cerrar la página-->
+ <div id="home-MyAccount" class="disappear"> <!--AQUI APLICO DISAPPEAR-->
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="img/labouserpersona.jpg" class="card-img" alt="foto-usuarix">
+    </div>
+    <div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" id="greeting"></h5>
+        <p class="card-text">Este es tu perfil</p>
+        <p class="card-text"><small class="text-muted">Recuerda actualizar tus gastos</small></p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card border-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Presupuesto global</div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title" id="savings-display"></h5>
+    <p class="card-text">Este es el total de tus ahorros e ingresos registrados hasta ahora.</p>
+  </div>
+</div>
+<div class="card border-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Presupuesto mensual</div>
+      <div class="card-body text-secondary">
+        <h5 class="card-title" id="monthly-display"></h5>
+        <p class="card-text">Este es tu prespuesto mensual.</p>
+      </div>
+    </div>
+    <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Presupuesto semanal</div>
+          <div class="card-body text-secondary">
+            <h5 class="card-title" id="weekly-display"></h5>
+            <p class="card-text">Este es tu presupuesto semanal.</p>
+          </div>
+        </div>
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+              <div class="card-header">Presupuesto diario</div>
+              <div class="card-body text-secondary">
+                <h5 class="card-title" id="daily-display"></h5>
+                <p class="card-text">Este es tu presupuesto diario.</p>
+              </div>
+            </div>
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Meta de ahorro para este periodo</div>
+                  <div class="card-body text-secondary">
+                    <h5 class="card-title" id="dailySaving-display"></h5>
+                    <p class="card-text">Esto puedes ahorrar si te ajustas a tu presupuesto.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAccount" id="button-edit-account">
+                Editar mi cuenta
+              </button>
+    </section>
+    <section class="section2"></section>
+        
+    
+  <!--Boostrap JS-->
+  <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html> 

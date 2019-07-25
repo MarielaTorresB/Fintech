@@ -1,0 +1,344 @@
+.mainbground {
+    background-color: #94C7AE;
+    background-image: url(img/bground.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.mainheader {
+    background-color: #2B4759;
+    width: 100vw;
+    height: 6rem;
+    margin: 0 auto;
+    top: 0;
+    padding-bottom: 0;
+    position: sticky;
+}
+.session-header {
+    background-color: #51A49C;
+    width: 100vw;
+    height: 6rem;
+    margin: 0 auto;
+    top: 0;
+    padding-bottom: 0;
+    position: sticky;
+}
+#email-img {
+  display: flex;
+  margin-right: 3%;
+  margin-top: 0%;
+  width: 1rem;
+  height: 1rem;
+}
+#password-img {
+  width: 1rem;
+  height: 1rem;
+}
+.movements {
+    background-image: url(img/piggy-bank.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom bottom;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.section2 {
+  background-color: #94C7AE;
+  width: 100vw;
+  height: 35vw;
+}
+
+@media only screen and (min-width:768px) {
+    .movements {
+        background-image: url(img/piggy-bank.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+    }
+}
+
+nav {
+    padding: 0;
+    list-style: none;
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+}
+nav h1 {
+    display: flex;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 1.3%;
+}
+
+a {
+    text-decoration:none;
+}
+
+/*Menu*/
+.coins {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    margin-left: 15%;
+    margin-top: 5%;
+
+}
+
+.hamb-menu {
+    width: 3rem;
+    height: 3rem;
+    padding: 15%;
+}
+
+.menu {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    order: -1;
+  
+    }
+  
+    .menu > li {
+      float: left;
+    }
+  
+    .menu li a {
+      background-color: white;
+      color: white;
+      padding: 1.5rem 1.5rem;
+      text-decoration: none;
+      display: block;
+    }
+  
+    .menu li a:hover {
+      background-color: #F19C81;
+  
+    }
+  
+    .menu ul {
+      display: none;
+      position: absolute;
+      min-width: 35vh;
+    }
+  
+    .menu li:hover > ul {
+      display:block;
+  }
+  
+  .menu ul li {
+      position:relative;
+  }
+  
+  .menu i  {
+    margin-right: 2rem;
+    font-size: 2rem;
+    border-radius: 0.2rem;
+    margin-left: 1rem;
+  }
+  
+  li {
+    list-style: none;
+  
+  }
+  .nomobile-menu {
+    display: none;
+  }
+  /*Modal*/
+  .modal-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+​
+.modal-title {
+    color: white;
+}
+.modal-header-1 {
+    text-align: center;
+    padding: 1vh;
+}
+​
+.modal-header, .modal-body, .modal-footer {
+    text-align: center;
+    color: black;
+    background-color:#B5D1A0;
+}
+​
+.icon {
+    height: auto;
+    width: auto;
+}
+​#session-button {
+    text-decoration: none;
+    color: white;
+}
+#register-button {
+    text-decoration: none;
+    color: white;
+}
+#save-register, #button-register, .footer button, #button-account-save, #button-account{
+    background-color: #F19C81;
+    color: black;
+    border-color: #F19C81;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+#button-register:hover {
+    background-color: #B2D8D4;
+    border-color: #B2D8D4
+}
+​
+#button-calculate-budget, #button-calculate-savings {
+    background-color: #F0C966;
+    border: none;
+  }
+  
+input::-webkit-input-placeholder {
+    font-size: .7rem;
+  }
+  input:-moz-placeholder {
+    font-size: .7rem; 
+  }
+  input:-ms-input-placeholder { 
+    font-size: .7rem;
+  }
+
+  #google-button {
+      width: 1.5rem;
+      height: 1.5rem;
+  }
+
+  #facebook-button {
+      width: 1.5rem;
+      height: 1.5 rem;
+  }
+
+  #remember-password {
+      color: blue;
+  }
+  /*NUEVO AJUSTA BOTÓN ¡HECHO! EN FOOTER DE MODAL DE REGISTRO*/
+#modal-footer {
+  display: flex;
+  justify-content: center;
+ }
+
+ /*Media query para header*/
+  @media only screen and (min-width:768px) {
+    section, nav {
+      width: 80vw;
+      margin: 0 auto;
+  }
+  
+  header {
+      padding: 1rem 0;
+  }
+  
+  nav {
+      position: relative;
+  }
+  nav h1 {
+      display: flex;
+      margin-left: 2%;
+  }
+
+  .coins {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    margin-left: 15%;
+    margin-top: 2.5%;
+
+}
+  .menu {
+    display: none;
+  }
+  
+  .nomobile-menu {
+    display: block;
+    position: absolute;
+    color: white;
+    right: 0;
+    margin-top: 3%;
+    margin-right: 0%;
+  }
+  
+
+  /* .nomobile-menu li {
+    display: inline;
+    font-size: 1.1rem;
+    
+  
+  }
+  
+  .nomobile-menu li:hover {
+      color: black;
+      text-decoration: none;
+  } */
+  .nomobile-menu a {
+    margin-right: 3rem;
+    color: black;
+    text-decoration: none;
+  }
+  
+}
+
+/*Info-square*/
+.info {
+    display: flex;
+    background-color: #94C7AE;
+    width: 65vw;
+    height: 65vh;
+}
+
+#mobile-info {
+    width: 80%;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: black;
+    display: block;
+  }
+  
+  #mobile-info div {
+    display: block;
+    margin-top: 4rem;
+  }
+  #info-square {
+    display: none;
+}
+
+@media only screen and (min-width:768px) {
+    .info {
+        display: flex;
+        background-color: #94C7AE;
+        width: 30vw;
+        height: 68vh;
+        margin-right: 100%;
+    }
+    #info-square {
+        width: 60%;
+        font-size: 2rem;
+        margin-right: 0%;
+        line-height: 3rem;
+        color: black;
+        display: block;
+      }
+      
+      #info-square div {
+        display: block;
+        margin-top: 4rem;
+      }
+#mobile-info {
+    display: none;
+}
+}
