@@ -7,11 +7,7 @@ const notificaciones=()=>{
         imageUrl: 'anxiety.svg',
         imageHeight: 300,
         imageAlt: 'anxiety',
-        text: 'Da click en el foco para ajustar tu presupuesto',
-        imageUrl: 'idea.svg',
-        imageHeight: 200,
-        imageAlt: 'bulb',
-        background: '#ff0000',
+        background: '#eb636b',
       })
 }
 
@@ -26,5 +22,5 @@ const metasCumplidas= () => {
 
 
 
-notificacionesBoton.addEventListener("click", notificaciones)
-metasCumplidasBoton.addEventListener("click", metasCumplidas)
+notificacionesBoton.addEventListener("click", notificaciones);
+metasCumplidasBoton.addEventListener("click", metasCumplidas);
