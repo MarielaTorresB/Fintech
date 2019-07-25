@@ -1,1 +1,52 @@
-style 
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-title {
+    color: white;
+}
+.modal-header-1 {
+    text-align: center;
+    padding: 1vh;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    text-align: center;
+    color: white;
+    background-color:#B5D1A0;
+}
+
+.icon {
+    height: auto;
+    width: auto;
+}
+
+input::-webkit-input-placeholder {
+    font-size: .7rem;
+  }
+  input:-moz-placeholder {
+    font-size: .7rem; 
+  }
+  input:-ms-input-placeholder { 
+    font-size: .7rem;
+  }
+
+#save-register, #button-register, .footer button, #button-account-save, #button-account, #button-create-account, #button-home-MyAccount {
+    background-color: #F19C81;
+    border: none;
+    color: white;
+}
+#button-calculate-budget, #button-calculate-savings {
+    background-color: #F0C966;
+    border: none;
+  }
+
+/*NUEVO AJUSTA BOTÓN ¡HECHO! EN FOOTER DE MODAL DE REGISTRO*/
+#modal-footer {
+ display: flex;
+ justify-content: center;
+}
+  
+
